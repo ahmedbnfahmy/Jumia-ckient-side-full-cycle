@@ -1,0 +1,39 @@
+<div class="mainDiv">
+    <div class="container">
+        <div class="images">
+            <a routerLink="/subcategory/642c0ae4ff89ab6980edd00f"><img class="col-2" src="../../../assets/images/home/N.png" alt=""></a>
+            <a><img class="col-2" src="../../../assets/images/home/R.png" alt=""></a>
+            <a routerLink="/subcategory/642c0b01ff89ab6980edd014"><img class="col-2" src="../../../assets/images/home/U.png" alt=""></a>
+            <a routerLink="/category/642c1271ff89ab6980edd04a"><img class="col-2" src="../../../assets/images/home/V.png" alt=""></a>
+            <a><img class="col-2" src="../../../assets/images/home/YY.png" alt=""></a>
+            <a><img class="col-2" src="../../../assets/images/home/XX.png" alt=""></a>
+        </div>
+
+        <section class="d-flex flex-wrap col-12 justify-content-between">
+            <div *ngFor="let prod of Products" class="product col-md-2">
+                <div class="product2" (click)="ProductDetails(prod._id)">
+                    <a  ><img [src]=" 'https://ecommerce-dashboard-website-api2.onrender.com/' + prod.imagePath[0]" alt="" class="myHomeImg"></a>
+                    <p><a >{{prod.name?prod.name.slice(0, 25):prod.arname.slice(0, 25)}}</a></p>
+                </div>
+                <div class="price" >
+                    {{"EGP"|translate}}{{prod.price}}
+                </div>
+                <div class="progress progressimg">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div><br>
+                <div>
+                    <button type="button" class="btn cardButton text-light" (click)="addToCart(prod._id)">{{"ADD TO CART"|translate}}</button>
+                </div>
+            </div>
+        </section>
+        <div class="images">
+            <a><img class="col-6" src="../../../assets/images/home/dfc1.png" alt=""></a>
+            <a><img class="col-6" src="../../../assets/images/home/CookwareFLOORDESKTOPEN.png" alt=""></a>
+        </div>
+        <div class="images">
+            <a><img class="col-6" src="../../../assets/images/home/TVs3.png" alt=""></a>
+            <a><img class="col-6" src="../../../assets/images/home/DeodorantsXFLOORDESKTOPEN.jpg" alt=""></a>
+        </div>  
+    </div>
+</div>

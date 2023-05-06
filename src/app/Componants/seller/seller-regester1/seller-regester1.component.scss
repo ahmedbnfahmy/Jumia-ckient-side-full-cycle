@@ -1,0 +1,114 @@
+.base {
+    width: 37.5%;
+    height: 400px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.base2 {
+    width: 37.5%;
+    height: 400px;
+    margin-top: 25px;
+    text-align: center;
+    padding: 100px 0;
+
+    h3 {
+        color: orange;
+        font-weight: bold;
+    }
+
+    p {
+        color: orange;
+        margin-top: 5%;
+    }
+
+    button {
+        border: 0;
+        color: white;
+        background-color: #FF9900;
+        box-shadow: 0 4px 2px -2px gray;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+.baseSpace {
+    width: 10%;
+    height: 300px;
+    margin-top: 25px;
+}
+
+.heading {
+    height: 80px;
+    margin-top: 25px;
+    text-align: center;
+    h3{
+        color: orange;
+        font-weight: bold;  
+    }
+    p{
+        color: #FF9900;
+    }
+    
+}
+
+.heading2 {
+    height: 80px;
+    margin-top: 10%;
+    text-align: center;
+    h3{
+        color: orange;
+        font-weight: bold;  
+    }
+    p{
+        color: #FF9900;
+    }
+    
+}
+
+.whySellCon {
+    width: 23%;
+    height: 350px;
+    margin-top: 25px;
+    margin-left: 2%;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    a{  
+        border: 0;
+        color: white;
+        background-color: #FF9900;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+}
+
+.whySellConSpace {
+    width: 12.5%;
+    height: 300px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.howSellCon {
+    width: 23%;
+    height: 300px;
+    margin-top: 25px;
+    background-color: gray;
+    margin-left: 2%;
+    text-align: center;
+}
+
+.howSellConSpace {
+    width: 17%;
+    height: 300px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.card-img-top{
+    margin-top: 5%;
+    width: 100px;
+    height: 100px;
+}

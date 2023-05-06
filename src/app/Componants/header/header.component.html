@@ -1,0 +1,123 @@
+<div class="container-fluid" style="background-color: #FF9900;">
+  <div class="row" style="height: 56px">
+    <div class="col-2"></div>
+    <div class="col-8" style="padding: 0%;margin: 0%;">
+      <img class="col-12" src="../../../assets/images/header2.jpg" alt="" style="box-sizing: border-box;"
+        *ngIf="currentLang=='ar'">
+      <img class="col-12" src="../../../assets/images/header1-2.jpg" alt="" style="box-sizing: border-box; "
+        *ngIf="currentLang=='en'">
+
+    </div>
+    <div class="col-2" style="height: 56px"></div>
+  </div>
+
+  <div class="row secondHeader" style="background-color: #F1F1F2;height: 30;">
+    <div class="col-xl-2"></div>
+    <div class="col-xl-8 d-flex justify-content-between align-items-center" style="padding: 0%;margin: 0%">
+      <span>
+        <span><img src="../../../assets/images/star2.png" alt="" width="20px" class="rounded-circle"></span>
+        <span class="headerFont"><a [translate]="'Sell on Jumia'" routerLink="/SellerRegester"></a></span>
+      </span>
+      <span><a routerLink="/#"><img src="../../../assets/images/pay1.jpg" alt="" height="35px"
+            class="rounded-circle"></a></span>
+      <span>
+
+        <button [ngStyle]="{'opacity': (currentLang=='ar') ? 1 :.3}" style="border: none;" id="enBtn"
+          class="p-1" (click)="changeCurrentLang('en')" [disabled]="currentLang=='en'"><img
+            src="../../../assets/images/en.png" alt="" width="14px">English |</button>
+
+        <button [ngStyle]="{'opacity': (currentLang=='en') ? 1 :.5}" style="border: none;" id="arBtn"
+          class="p-1" (click)="changeCurrentLang('ar')" [disabled]="currentLang=='ar'"><img
+            src="../../../assets/images/ar.png" alt="" width="14px">عربى</button>
+
+        </span>
+    </div>
+
+    <div class="col-xl-2"></div>
+
+  </div>
+
+  <div class="row nav-bar thirdHeaderContiner col-xl-12" style="background-color: white;">
+
+    <div class="col-xl-1" style="height: 72px"></div>
+    <div class="col-xl-10 d-flex justify-content-between align-items-center thirdHeader" style="height: 72px;">
+      <div class="col-xl-2">
+        <span>
+          <a routerLink="/" routerLinkActive="active"><img src="../../../assets/images/logo.png" alt="" hight="72px"
+              class="rounded-circle"></a>
+        </span>
+      </div>
+      <div class="col-xl-6">
+        <form action="" class="form-div col-xl-12 mt-3">
+          <span class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"><i id="navs" class="fa-solid fa-magnifying-glass"
+                  style="font-size:25px;color:gray;"></i></span>
+            </div>
+            <input type="text" class="form-control paddingStyle"
+              placeholder="{{'Search products, brands and categories'|translate}}" aria-label="Username"
+              aria-describedby="basic-addon1" #inputSearch>
+            <button class=" px-2 py-1 paddingStyle"
+              style="border: 0;color: white;background-color: #FF9900;box-shadow: 0 4px 2px -2px gray;"
+              id="searchButton" (click)="searchInput(inputSearch.value)">{{"Search"|translate}}</button>
+          </span>
+        </form>
+
+      </div>
+      <div class="col-xl-6" style="height: 72;">
+        <span class="dropdown px-2 bg-white border border-white paddingStyle">
+          <span class=" dropdown-toggle bg-white p-1 paddingStyle"
+            style="font-size: 17px;border: 0;background-color: #FFFFFF;" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <button id="navs" class="bg-white paddingStyle" style="border: 0 white;font-weight: 500" *ngIf="User.name||!User.name">{{User.name}}
+              <i id="navs" class="bi bi-person" style="font-weight: bold;font-size: 18px;"></i>
+              <span [hidden]="User.name">{{" Account"|translate}}</span>
+            </button>
+
+          </span>
+          <ul class="dropdown-menu" style="width: 250px; text-align: center;">
+            <li><a class="dropdown-item" routerLink="/User/login" [hidden]="loged">{{"Sign In"|translate}}</a></li>
+            <li><a class="dropdown-item" routerLink="/User/signup" [hidden]="loged">{{"Sign up"|translate}}</a></li>
+            <li><a class="dropdown-item" routerLink="/useraccount/accountoverview">{{"My Account"|translate}}</a></li>
+            <li><a class="dropdown-item" routerLink="/wichList">{{"Saved items"|translate}}</a></li>
+            <li><a class="dropdown-item" routerLink="/about">{{"About Us"|translate}}</a></li>
+
+            <hr />
+            <a routerLink="/" (click)="logOut()">
+              <span style="margin: 30%;color: #f68b1e;font-weight: 400;">{{"LOGOUT"|translate}}</span>
+            </a>
+          </ul>
+        </span>
+        <span class="dropdown px-2 bg-white border border-white">
+          <span class=" dropdown-toggle bg-white p-1" style="font-size: 15px;border: 0;background-color: #FFFFFF;"
+            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button id="navs" class="bg-white headerFont" style="font-weight: 500;border: 0 white">
+              <i id="navs" style="font-weight: bold;font-size: 15px" class="bi bi-question-circle"></i>
+              {{"Help"|translate}}</button>
+          </span>
+          <ul class="dropdown-menu" style="width: 250px; text-align: center;">
+            <li><a class="dropdown-item" routerLink="/help">{{"Help Center"|translate}}</a></li>
+            <li><a class="dropdown-item" routerLink="/#">{{"Order Cancellation"|translate}}</a></li>
+            <li><a class="dropdown-item" routerLink="/#">{{"Returns and Refund"|translate}}</a></li>
+          </ul>
+        </span>
+        <span class=" bg-white p-1" style="font-size: 15px;border: 0;background-color: #FFFFFF;" type="button"
+          aria-expanded="false">
+          <button id="navs" class="bg-white headerFont" style="font-weight: 500;border: 0 white">
+            <i id="navs" style="font-weight: bold;font-size: 20px" class="bi bi-cart4 position-relative m-3">
+              <span style="font-size: 13px;background-color: #FF9900;"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning"
+                [hidden]="len<1">
+                {{len}}
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </i>
+            <a id="navs" routerLink="/cart" routerLinkActive="active" style="font-size: 15px;">{{"Cart"|translate}}
+            </a>
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+
+</div>

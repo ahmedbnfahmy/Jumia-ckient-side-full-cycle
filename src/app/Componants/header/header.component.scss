@@ -1,0 +1,85 @@
+/* Option 2: Import via CSS */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+* {
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box;
+  border: 0 important;
+  padding: 0 important;
+  margin: 0 important;
+}
+
+////////////
+
+.nav-bar {
+  //box-shadow:0 0 2px 0 #cab7b0;
+  box-shadow: 0 4px 2px -2px gray;
+  // flex-wrap: wrap;
+}
+
+@media screen and (max-width: 375px){
+  .thirdHeaderContiner{
+    input{
+      width: 45%;
+    }
+  }
+
+  .headerFont{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .headerFont {
+    font-size: 11px;
+  }
+
+  .thirdHeaderContiner {
+    height: 100px;
+    width: 100%;
+    margin: 0px;
+    .thirdHeader {
+      flex-direction: column;
+    }
+  }
+
+  .JumiaLogo {
+    display: none;
+  }
+
+  .emptyDiv {
+    display: none;
+  }
+
+  .paddingStyle {
+    font-size: 12px;
+    padding: 2px !important;
+    border-radius: 2px;
+    border: .5px solid #666;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .JumiaLogo{
+    margin-right:30px !important;
+  }
+
+  .paddingStyle {
+    font-size: 14px;
+    padding: 2px !important;
+    border-radius: 2px;
+    border: 1px solid #666;
+  }
+}
+
+
+#navs:hover{
+  color: orange;
+}
+
+
+#enBtn,
+#arBtn:hover{
+  cursor: pointer;
+}

@@ -1,0 +1,100 @@
+<div class="container-fluid sellerCont bg-white">
+    <form class="row g-3" [formGroup]="sellerInputs" (ngSubmit)="sellerSignUp()">
+        <div class="col-12">
+            <label for="name" class="form-label"><strong>Full Name</strong> </label>
+            <input type="text" class="form-control" formControlName="name" placeholder="Enter Your Full Name ...">
+        </div>
+        <div *ngIf="sellerInputs.controls['name'].invalid && (sellerInputs.controls['name'].dirty || sellerInputs.controls['name'].touched)"
+            class="">
+            <div *ngIf="sellerInputs.controls['name'].errors" class=" text-warning">
+
+                {{"Please Enter Your Full Name ..!"|translate}}
+
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <label for="email" class="form-label"><strong>Email</strong></label>
+            <input type="email" class="form-control" formControlName="email" placeholder="Enter Your Email ...">
+        </div>
+        <div *ngIf="sellerInputs.controls['email'].invalid && (sellerInputs.controls['email'].dirty || sellerInputs.controls['email'].touched)"
+            class="">
+            <div *ngIf="sellerInputs.controls['email'].errors" class=" text-warning">
+
+                {{"Please Enter Your Email ..!"|translate}}
+
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <label for="password" class="form-label"><strong>Password</strong></label>
+            <input type="password" class="form-control" formControlName="password">
+        </div>
+        <div *ngIf="sellerInputs.controls['password'].invalid && (sellerInputs.controls['password'].dirty || sellerInputs.controls['password'].touched)"
+            class="">
+            <div *ngIf="sellerInputs.controls['password'].errors" class=" text-warning">
+
+                {{"Please Enter Your Full Password ..!"|translate}}
+
+            </div>
+        </div>
+
+
+        <div class="col-12">
+            <label for="phone" class="form-label"><strong>Phone</strong> </label>
+            <input type="text" class="form-control" formControlName="phone" placeholder="Enter Your Phone ...">
+        </div>
+        <div *ngIf="sellerInputs.controls['phone'].invalid && (sellerInputs.controls['phone'].dirty || sellerInputs.controls['phone'].touched)"
+            class="">
+            <div *ngIf="sellerInputs.controls['phone'].errors" class=" text-warning">
+
+                {{"Please Enter Your Phone ..!"|translate}}
+
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <label for="shopName" class="form-label"><strong>Shop Name</strong></label>
+            <input type="text" class="form-control" formControlName="shopName">
+        </div>
+        <div *ngIf="sellerInputs.controls['shopName'].invalid && (sellerInputs.controls['shopName'].dirty || sellerInputs.controls['shopName'].touched)"
+            class="">
+            <div *ngIf="sellerInputs.controls['shopName'].errors" class=" text-warning">
+
+                {{"Please Enter Your Shop Name ..!"|translate}}
+
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <label for="description" class="form-label"><strong>Shop Description</strong> </label>
+            <input type="text" class="form-control" formControlName="description">
+        </div>
+        <div *ngIf="sellerInputs.controls['description'].invalid && (sellerInputs.controls['description'].dirty || sellerInputs.controls['description'].touched)"
+            class="">
+            <div *ngIf="sellerInputs.controls['description'].errors" class=" text-warning">
+
+                {{"Please Enter Your Shop Description ..!"|translate}}
+
+            </div>
+        </div>
+
+
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    I Agree Terms and Conditions
+                </label>
+            </div>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn sellerSignup">Sign Up</button>
+        </div>
+        <div style="height: 20px;"></div>
+    </form>
+</div>
